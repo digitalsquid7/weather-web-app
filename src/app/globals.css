@@ -7,7 +7,8 @@
 
 html,
 body {
-  max-width: 100vw;
+  width: 100vw;
+  height: 100vh;
   overflow-x: hidden;
 }
 
@@ -43,13 +44,41 @@ a {
   font-family: "DM Sans", Arial, Helvetica, sans-serif;
   color: #222222;
   width: 100%;
-  padding: 25px;
   border-radius: 50px;
+  padding: 25px;
   font-size: 30px;
-  margin-top: 20px;
   outline: 0;
-  box-shadow: 0 0 20px #CCCCCC;
   border: 0;
+}
+
+#search-area {
+  position: absolute;
+  width: 100%;
+  border-radius: 50px;
+  margin-top: 20px;
+  box-shadow: 0 0 20px #CCCCCC;
+  background-color: white;
+  z-index: 100;
+}
+
+#search-area-container {
+  position: relative;
+  height: 100px;
+}
+
+.search-suggestion {
+  padding: 25px;
+  font-size: 30px;
+}
+
+.search-suggestion:hover {
+  background-color: #f2f2f2;
+  cursor: pointer;
+}
+
+.search-suggestion:last-child {
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
 }
 
 #overview {
