@@ -1,10 +1,10 @@
 import Image from "next/image";
 
-export default function Overview() {
+export default function Overview({weatherData}) {
     return (
         <div id="overview">
             <WeatherIcon/>
-            <TemperatureContainer/>
+            <TemperatureContainer weatherData={weatherData}/>
         </div>
     )
 }
@@ -13,19 +13,13 @@ function WeatherIcon() {
     return <Image src="/sunny.png" alt="weather icon" width={300} height={300}/>
 }
 
-function TemperatureContainer() {
+function TemperatureContainer({weatherData}) {
+    console.log('weather data: ', weatherData);
+
     return (
         <div id="temperature-container">
-            <Temperature/>
-            <WeatherDescription/>
+            <div id="temperature">{weatherData.current.temperature_2m} °C</div>
+            <div id="weather-description">Clear Skies</div>
         </div>
     )
-}
-
-function Temperature() {
-    return <div id="temperature">23 °C</div>
-}
-
-function WeatherDescription() {
-    return <div id="weather-description">Clear Skies</div>
 }

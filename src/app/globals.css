@@ -63,7 +63,7 @@ a {
 
 #search-area-container {
   position: relative;
-  height: 100px;
+  height: 150px;
 }
 
 .search-suggestion {
@@ -82,7 +82,6 @@ a {
 }
 
 #overview {
-  margin-top: 50px;
   display: flex;
   align-items: center;
   justify-content: space-evenly;

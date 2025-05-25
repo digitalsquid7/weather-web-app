@@ -2,8 +2,7 @@
 
 import {useState} from "react";
 
-export default function SearchArea({cities}) {
-    const [searchText, setSearchText] = useState('')
+export default function SearchArea({cities, searchText, setSearchText}) {
     return (
         <div id="search-area-container">
             <div id="search-area">
@@ -17,14 +16,21 @@ export default function SearchArea({cities}) {
 function SearchBar({searchText, setSearchText}) {
     return (
         <form autoComplete="off">
-            <input id="search-bar" type="text" placeholder="Search..." autoComplete="off"
-                   value={searchText} onChange={e => setSearchText(e.target.value)}/>
+            <input
+                id="search-bar"
+                type="text"
+                placeholder="Search an Australian city..."
+                autoComplete="off"
+                value={searchText}
+                onChange={e => setSearchText(e.target.value)}
+                onFocus={(e) => e.target.select()}
+            />
         </form>
     )
 }
 
 function SearchSuggestions({cities, searchText, setSearchText}) {
-    if (searchText.length === 0) {
+    if (searchText === '') {
         return;
     }
 
