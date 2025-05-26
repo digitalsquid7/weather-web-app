@@ -1,7 +1,7 @@
 export default function Statistics({weatherData}) {
     return (
         <div id="weather-details">
-            <WeatherCard title="Humidity" value={`${weatherData.current.relative_humidity_2m}%`}/>`
+            <WeatherCard title="Humidity" value={`${weatherData.current.relative_humidity_2m}%`}/>
             <WeatherCard title="Wind" value={`${weatherData.current.wind_speed_10m} km/s`}/>
             <WeatherCard title="Pressure" value={`${weatherData.current.surface_pressure} hPa`}/>
             <WeatherCard title="Precipitation" value={`${weatherData.current.precipitation} mm`}/>

@@ -1,7 +1,5 @@
 "use client";
 
-import {useState} from "react";
-
 export default function SearchArea({cities, searchText, setSearchText}) {
     return (
         <div id="search-area-container">
