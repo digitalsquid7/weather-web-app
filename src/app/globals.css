@@ -40,6 +40,8 @@ a {
   flex-direction: column;
 }
 
+/* Search Bar */
+
 #search-bar {
   font-family: "DM Sans", Arial, Helvetica, sans-serif;
   color: #222222;
@@ -49,6 +51,7 @@ a {
   font-size: 30px;
   outline: 0;
   border: 0;
+  user-select: none;
 }
 
 #search-area {
@@ -81,6 +84,8 @@ a {
   border-bottom-right-radius: 50px;
 }
 
+/* Weather Overview */
+
 #overview {
   display: flex;
   align-items: center;
@@ -88,9 +93,22 @@ a {
   gap: 20px;
 }
 
+#temperature-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
 #temperature {
   font-size: 150px;
 }
+
+#weather-description {
+  font-size: 50px;
+  color: #333333;
+}
+
+/* Weather Details */
 
 #weather-details {
   margin-top: 30px;
@@ -106,13 +124,25 @@ a {
   font-size: 30px;
 }
 
-#temperature-container {
+/* Loading Icon */
+
+#loading-container {
   display: flex;
-  flex-direction: column;
-  gap: 0;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 100px;
 }
 
-#weather-description {
-  font-size: 50px;
-  color: #333333;
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#loading-icon {
+  animation: spin 2s linear infinite;
 }
