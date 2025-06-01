@@ -116,11 +116,11 @@ a {
   justify-content: space-evenly;
 }
 
-#weather-card {
+.weather-card {
   font-size: 30px;
 }
 
-#weather-card h3 {
+.weather-card h3 {
   font-size: 30px;
 }
 

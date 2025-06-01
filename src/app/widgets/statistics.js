@@ -11,7 +11,7 @@ export default function Statistics({weatherData}) {
 
 function WeatherCard({title, value}) {
     return (
-        <div id="weather-card">
+        <div className="weather-card">
             <h3>{title}</h3>
             <p>{value}</p>
         </div>
